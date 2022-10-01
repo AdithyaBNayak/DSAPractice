@@ -15,8 +15,8 @@ def binary_serach(arr, key , l, r):
 
     return -1
 
-arr = [ 2, 34, 5, 7, 46, 9, 77, 6, 9, 98, 67, 38 ]    
-key = 46
+arr = [ 1,3,4,7,9,44,67,79,89 ]    
+key = 89
 index = binary_serach(arr , key , 0 , len(arr)-1 ) 
 print(index)
 
