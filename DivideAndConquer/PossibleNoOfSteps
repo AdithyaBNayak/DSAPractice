@@ -1,0 +1,33 @@
+# Count Number of Stairs to reach Particular distance N
+"""
+Question:
+Person can take 1 or 2 step at a time
+When n = 1  Ans = 1    (1)
+When n = 2  Ans = 2    (1,1),(2)
+When n = 3  Ans = 3    (1,1,1),(1,2),(2,1)
+When n = 4  Ans = 5    (1,1,1,1),(1,1,2),(1,2,1),(2,1,1),(2,2)
+
+"""
+
+"""
+Solution:
+We can see that the solution is a fibonacci number
+"""
+
+# Function Definition
+def possibilities(n):
+    if n == 2:
+        return 2
+    elif n == 1:
+        return 1
+    else:
+        return possibilities(n-1) + possibilities(n-2)
+
+# Driver Code
+n = 5
+print(f"No of possible steps is {possibilities(n)}")
+
+"""
+For the large value of n, the code doesnt word, due yto Overlapping SubProblem
+We repeatedly try to solve the same problem
+"""
