@@ -1,6 +1,8 @@
 """
 Solution 1: Sorting
 Solution 2: Dutch National Flag ALgorithm (2 pointer approach)
+    TC = O(N)
+    SC = O(1)
 
 """
 # Function Definition
