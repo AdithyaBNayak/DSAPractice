@@ -21,13 +21,26 @@ def missingElement(arr):
     # Printing index of positive number
     for j in range(len(arr)):
         if arr[j] > 0:            
-            return j+1 
+            print(j+1)
 
     # Solution2: Sorting+ Swapping Method
-    
+    i = 0
+    while i <= len(arr):
+        index = abs(arr[i]-1)
+        if arr[i] != arr[index]:
+            arr[i], arr[index] = arr[index],arr[i]
+        else:
+            i += 1    
+        
+
+    for j in range(1,len(arr)+1):
+        if arr[j] != j+1:
+            print(j)    
+
 
 
 
 # Driver Code
-arr = [1,2,5,3,6,7,2,8,4]
-print(f"Missing Element is {missingElement(arr)}")
+arr = [1,2,5,3,6,7,2,8,4,4]
+print(f"Missing Element are:-")
+missingElement(arr)
