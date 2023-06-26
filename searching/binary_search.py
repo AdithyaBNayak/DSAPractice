@@ -20,4 +20,4 @@ key = 89
 index = binary_serach(arr , key , 0 , len(arr)-1 ) 
 print(index)
 
-    
+# TC=O(n)    
