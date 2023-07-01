@@ -3,7 +3,19 @@ def insertion_sort(arr):
     n = len(arr)
     for round in range(1,n):
         # Round should start from 1 to end of the array
-        val = arr[round]     
+        val = arr[round]
+        j = round - 1
+
+        while j>=0 and arr[j] > val:
+            arr[j+1] = arr[j]
+            j -= 1
+
+        # Below for loop also can be provided instead             
+
+        # insert the value in appropiate place    
+        arr[j+1] = val
+
+        '''
         for j in range(round - 1, -2, -1):
             # j should move from round -1 till -1(Note: not till 0)
 
@@ -15,9 +27,7 @@ def insertion_sort(arr):
             else:
                 # As we mover right, the left part keeps getting sorted.
                 break
-
-        # insert the value in appropiate place    
-        arr[j+1] = val
+        ''' 
         
     return arr
 
