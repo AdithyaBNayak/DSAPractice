@@ -1,4 +1,4 @@
-# Insertion Sort
+# Insertion Sort - TC = O(n)
 def insertion_sort(arr):
     n = len(arr)
     for round in range(1,n):
