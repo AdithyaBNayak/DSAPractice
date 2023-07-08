@@ -27,8 +27,12 @@ def min_time_diff(times):
         minimum = min(minimum, mins[j+1] - mins[j])
 
     # Step4: Important step (if time is ['23:59','00:00'])
-    lastDiff = (mins[0] +  1440) - mins[len(mins)-1]
-    # 23:59 is 1439 
+    lastDiff1 = (mins[0] +  1440) - mins[len(mins)-1]
+    # 23:59 is 1439
+
+    # But in case 1st ele is 10 and last ele is 700
+    lastDiff2 = mins[len(mins)-1] - mins[0]
+    lastDiff = min(lastDiff1,lastDiff2)
     minimum = min(lastDiff, minimum)
 
     return minimum
